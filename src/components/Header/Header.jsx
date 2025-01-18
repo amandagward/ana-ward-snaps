@@ -1,13 +1,18 @@
 import "./Header.scss";
 
-function Header() {
+function Header({ filtersOpen, setFiltersOpen }) {
     return (
-        <header>
-            <div className="header">
-                <h1>Snaps</h1>
-            </div>
+        <header className="header">
+            <span className="header__logo">Snaps</span>
+            <button
+                className={`toggle-filters-button ${filtersOpen ? "toggle-filters-button--open" : ""
+                    }`}
+                onClick={() => setFiltersOpen((prev) => !prev)}
+            >
+                Filters
+            </button>
         </header>
     );
 }
 
-export default Header
+export default Header;

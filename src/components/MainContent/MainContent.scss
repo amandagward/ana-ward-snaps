@@ -1,0 +1,12 @@
+// Movie Main Content
+
+@use "../../styles/partials/_mixins.scss" as *;
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row-reverse;
+    }
+}

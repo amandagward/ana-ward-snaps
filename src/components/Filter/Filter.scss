@@ -1,0 +1,34 @@
+@use "../../styles/partials/_mixins.scss" as *;
+
+.filter-list {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    background-color: antiquewhite;
+    padding: 1rem;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    @include desktop {
+        // width: 40%;
+    }
+}
+
+.filter {
+    padding: 1rem;
+    background-color: #779be7;
+    border-radius: 0.5rem;
+    border: 2px solid #779be7;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #5172ba;
+        border: 2px solid #5172ba;
+    }
+
+    &--active {
+        background-color: #a8bce6;
+        border: 2px solid pink;
+    }
+}

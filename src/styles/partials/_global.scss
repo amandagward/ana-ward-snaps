@@ -2,6 +2,12 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Newsreader", "Outfit";
+}
+
 ul,
 li {
     list-style-type: none;

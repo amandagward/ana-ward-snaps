@@ -1,0 +1,20 @@
+// MovieCard.scss
+
+@use "../../styles/partials/_mixins.scss" as *;
+
+.movie-card {
+    width: 95%;
+    background-color: #a480cf;
+    border: 1px solid blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+
+    @include tablet {
+        width: 45%;
+    }
+
+    @include desktop {
+        width: 30%;
+    }
+}

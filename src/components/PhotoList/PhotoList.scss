@@ -1,0 +1,13 @@
+// MovieList.scss
+
+@use "../../styles/partials/_mixins.scss" as *;
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    line-height: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+}

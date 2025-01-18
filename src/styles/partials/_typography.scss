@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'Newsreader';
-    src: url('/src/assets/fonts/Newsreader-Light.woff') format('woff2'),
-        url('/src/assets/fonts/Newsreader-Light.woff') format('woff');
+    src: url('./src/assets/fonts/Newsreader-Light.woff') format('woff2'),
+        url('./src/assets/fonts/Newsreader-Light.woff') format('woff');
     font-weight: 300; // Light
     font-style: normal;
 }
