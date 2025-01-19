@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-sage;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__logo {
+        color: $color-snaps-black;
+    }
+
+    &__resoruces {
+        color: $color-snaps-black;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__bio {
+        color: $color-snaps-black;
+
+        @include tablet {}
+
+        @include desktop {}
+    }
+
+    &__socials {
+        color: $color-forest-green;
+    }
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+}

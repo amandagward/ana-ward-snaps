@@ -1,14 +1,13 @@
-// MovieCard.scss
-
 @use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
 
-.movie-card {
+.photo-card {
     width: 95%;
-    background-color: #a480cf;
-    border: 1px solid blue;
+    background-color: $color-sea-green;
+    border: 1px solid $color-forest-green;
     border-radius: 1rem;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
 
     @include tablet {
         width: 45%;

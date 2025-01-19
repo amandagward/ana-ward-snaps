@@ -2,28 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-    color: $color-forest-green;
-}
-
-
-
-
-
-
-
-
-
-
-
-// Movie Header
-
-.header {
     height: 15vh;
-    background-color: #d264b6;
     display: flex;
     padding: 2rem;
     align-items: center;
     justify-content: space-between;
+    color: $color-snaps-black;
+    background-color: $color-sage;
 
     &__logo {
         font-size: 2rem;
@@ -32,7 +17,10 @@
 
 .toggle-filters-button {
     padding: 1rem;
-    background-color: #49b6ff;
+    background-color: $color-sage;
+    border-color: $color-forest-green;
+    border-radius: 3rem;
+    color: $color-forest-green;
     font-size: 1.3rem;
     cursor: pointer;
 
