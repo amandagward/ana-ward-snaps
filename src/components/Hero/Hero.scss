@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+    display: flex;
+    width: 30rem;
+    padding: 2rem;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    color: $color-snaps-black;
+
+    &__mission {}
+
+
+    &__quote {}
+}
