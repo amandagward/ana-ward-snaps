@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
 
+
     @include tablet {
         flex-direction: row;
     }
@@ -36,6 +37,14 @@
     &__socials {
         color: $color-forest-green;
         flex-direction: row;
+    }
+
+    &__legal {
+        color: $color-sea-green;
+
+        &-item-dot {
+            color: $color-snaps-black;
+        }
     }
 
     @include tablet {}

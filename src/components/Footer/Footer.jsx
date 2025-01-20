@@ -6,18 +6,18 @@ function Footer() {
             <div className="footer__logo">Snaps</div>
 
             <div className="footer__resources">
-                <ul>
-                    <li>For photographers</li>
-                    <li>Hire talent</li>
-                    <li>Inspiration</li>
+                <ul className="footer__resources-list">
+                    <li className="footer__resources-item">For photographers</li>
+                    <li className="footer__resources-item">Hire talent</li>
+                    <li className="footer__resources-item">Inspiration</li>
                 </ul>
             </div>
 
             <div className="footer__bio">
-                <ul>
-                    <li>About</li>
-                    <li>Careers</li>
-                    <li>Support</li>
+                <ul className="footer__bio-list">
+                    <li className="footer__bio-item" >About</li>
+                    <li className="footer__bio-item">Careers</li>
+                    <li className="footer__bio-item">Support</li>
                 </ul>
             </div>
 
@@ -48,6 +48,17 @@ function Footer() {
                 </div>
 
             </div>
+
+            <div className="footer__legal">
+                <ul className="footer__legal-list">
+                    <li className="footer__legal-item">© 2024 Snaps</li>
+                    <li className="footer__legal-item footer__legal-item-dot">.</li>
+                    <li className="footer__legal-item">Terms</li>
+                    <li className="footer__legal-item">Privacy</li>
+                    <li className="footer__legal-item">Cookies</li>
+                </ul>
+            </div>
+
         </div>
     );
 }

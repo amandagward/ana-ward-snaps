@@ -13,6 +13,14 @@
         border-radius: 1rem 1rem 0 0;
     }
 
+    &__tags {
+        color: $color-snaps-black;
+        background-color: $color-snaps-white;
+        border: 1px solid $color-forest-green;
+        border-radius: 1rem;
+        text-align: left;
+    }
+
     @include tablet {
         width: 45%;
     }
