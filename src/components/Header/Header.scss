@@ -24,6 +24,7 @@
     cursor: pointer;
 
     &--open {
-        background-color: #6c818f;
+        color: $color-snaps-white;
+        background-color: $color-forest-green;
     }
 }

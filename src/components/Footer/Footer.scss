@@ -4,7 +4,6 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: $color-sage;
 
     @include tablet {
         flex-direction: row;
@@ -18,7 +17,7 @@
         color: $color-snaps-black;
     }
 
-    &__resoruces {
+    &__resources {
         color: $color-snaps-black;
 
         @include tablet {}
@@ -36,13 +35,10 @@
 
     &__socials {
         color: $color-forest-green;
-    }
-
-    @include tablet {
         flex-direction: row;
     }
 
-    @include desktop {
-        flex-direction: row;
-    }
+    @include tablet {}
+
+    @include desktop {}
 }
