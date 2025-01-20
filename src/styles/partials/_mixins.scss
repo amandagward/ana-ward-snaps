@@ -1,6 +1,8 @@
 @use '/src/styles/partials/variables' as *;
 @use '/src/styles/partials/typography' as *;
 
+// Screen Size Breakpoint Mixins
+
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint) {
         @content;
@@ -11,4 +13,79 @@
     @media screen and (min-width: $desktop-breakpoint) {
         @content;
     }
+}
+
+// Font Mixins
+
+@mixin font-face($size, $line-height, $weight, $style: normal) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+// Mobile text styles
+@mixin wordmark-mobile {
+    @include font-face(32px, 32px, 400);
+}
+
+@mixin title-mobile {
+    @include font-face(26px, 38px, 300);
+}
+
+@mixin title-italic-mobile {
+    @include font-face(26px, 38px, 300, italic);
+}
+
+@mixin heading-mobile {
+    @include font-face(18px, 23px, 500);
+}
+
+@mixin body-copy-mobile {
+    @include font-face(12px, 15px, 500);
+}
+
+@mixin body-copy-light-mobile {
+    @include font-face(12px, 15px, 300);
+}
+
+@mixin small-body-copy-mobile {
+    @include font-face(10px, 12px, 500);
+}
+
+@mixin label-mobile {
+    @include font-face(12px, 15px, 500);
+}
+
+// Tablet/Desktop text styles
+@mixin wordmark-desktop {
+    @include font-face(40px, 40px, 400);
+}
+
+@mixin title-desktop {
+    @include font-face(52px, 66px, 300);
+}
+
+@mixin title-italic-desktop {
+    @include font-face(52px, 66px, 300, italic);
+}
+
+@mixin heading-desktop {
+    @include font-face(24px, 30px, 500);
+}
+
+@mixin body-copy-desktop {
+    @include font-face(20px, 26px, 500);
+}
+
+@mixin body-copy-light-desktop {
+    @include font-face(20px, 26px, 300);
+}
+
+@mixin small-body-copy-desktop {
+    @include font-face(12px, 15px, 500);
+}
+
+@mixin label-desktop {
+    @include font-face(14px, 17.5px, 500);
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Hero from "../Hero/Hero";
 import Filter from "../Filter/Filter";
 import PhotoList from "../PhotoList/PhotoList";
 import "./MainContent.scss";

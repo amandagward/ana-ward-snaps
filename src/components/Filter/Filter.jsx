@@ -14,18 +14,21 @@ export default function Filter({ activeFilter, setActiveFilter }) {
 
     return (
         <div className="filter-list">
-            {tags.map((tag, index) => {
-                return (
-                    <span
-                        key={index}
-                        className={`filter ${activeFilter === tag ? "filter--active" : ""
-                            }`}
-                        onClick={() => handleTagClick(tag)}
-                    >
-                        {tag}
-                    </span>
-                )
-            })}
+            <p className="filter-list__title">Filters</p>
+            <div className="filter-list__container">
+                {tags.map((tag, index) => {
+                    return (
+                        <span
+                            key={index}
+                            className={`filter ${activeFilter === tag ? "filter--active" : ""
+                                }`}
+                            onClick={() => handleTagClick(tag)}
+                        >
+                            {tag}
+                        </span>
+                    )
+                })}
+            </div>
         </div>
     )
 }

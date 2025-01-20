@@ -1,7 +1,5 @@
 import "./PhotoList.scss";
-
 import PhotoCard from "../PhotoCard/PhotoCard";
-
 import photos from "../../data/photos.json";
 
 export default function PhotoList({ activeFilter }) {
@@ -17,7 +15,7 @@ export default function PhotoList({ activeFilter }) {
     });
 
     return (
-        <div className="movie-list">
+        <div className="photo-list">
             {filteredPhotos.map((photo) => {
                 return <PhotoCard key={photo.id} photo={photo} />;
             })}

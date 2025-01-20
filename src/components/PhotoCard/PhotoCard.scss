@@ -6,8 +6,12 @@
     background-color: $color-sea-green;
     border: 1px solid $color-forest-green;
     border-radius: 1rem;
-    padding: 1rem;
     text-align: left;
+
+    &__photo {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
 
     @include tablet {
         width: 45%;

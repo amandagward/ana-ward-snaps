@@ -1,8 +1,6 @@
-// MovieList.scss
-
 @use "../../styles/partials/_mixins.scss" as *;
 
-.movie-list {
+.photo-list {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;

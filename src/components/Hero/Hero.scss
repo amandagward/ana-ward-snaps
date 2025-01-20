@@ -10,8 +10,24 @@
     justify-content: left;
     color: $color-snaps-black;
 
-    &__mission {}
+    &__mission {
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 60%;
+        }
+    }
 
 
-    &__quote {}
+    &__quote {
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 60%;
+        }
+    }
 }
