@@ -1,7 +1,20 @@
-import tags from "../../data/tags.json";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./Filter.scss";
 
 export default function Filter({ activeFilter, setActiveFilter }) {
+
+    const [tags, setTags] = useState([]);
+    useEffect(() => {
+        const fetchTags = async () => {
+            const response = await axios.get(
+                `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=${window.apikey}`
+            );
+            setTags(response.data);
+        };
+        fetchTags();
+    }, []);
+
     const handleTagClick = (tagClicked) => {
         console.log(`${tagClicked} tag clicked`);
         if (tagClicked === activeFilter) {
@@ -10,7 +23,6 @@ export default function Filter({ activeFilter, setActiveFilter }) {
             setActiveFilter(tagClicked);
         }
     };
-
 
     return (
         <div className="filter-list">

@@ -5,15 +5,21 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: "Newsreader", "Outfit";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 ul,
 li {
     list-style-type: none;
     text-decoration: none;
+    padding: 0;
 }
 
 body {
     background-color: $color-pistachio;
+    font-family: "Newsreader", "Outfit";
 }

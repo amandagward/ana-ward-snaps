@@ -1,8 +1,19 @@
-import "./PhotoList.scss";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import PhotoCard from "../PhotoCard/PhotoCard";
-import photos from "../../data/photos.json";
+import "./PhotoList.scss";
 
 export default function PhotoList({ activeFilter }) {
+    const [photos, setPhotos] = useState([]);
+    useEffect(() => {
+        const fetchPhotos = async () => {
+            const response = await axios.get(
+                `https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=${window.apikey}`
+            );
+            setPhotos(response.data);
+        };
+        fetchPhotos();
+    }, []);
 
     let filteredPhotos = photos.filter((photo) => {
         if (activeFilter === null) {

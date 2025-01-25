@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-import "./PhotoCard.scss";
+import "./PhotoDetailCard.scss";
 
-export default function PhotoCard({ photo }) {
+export default function PhotoDetailCard({ photo }) {
     return (
         <section className="photo-card">
             <div className="photo-wrapper">
-                <Link to={`photo/${photo.id}`}> <img className="photo-wrapper__photo" src={photo.photo} /></Link>
-                <div className="photo-wrapper__photographer"> <p>{photo.photographer}</p></div>
+                <img className="photo-wrapper__photo" src={photo.photo} />
             </div>
             <ul className="photo-tags">
                 {photo.tags.map((tag) => {

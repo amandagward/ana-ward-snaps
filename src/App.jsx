@@ -1,20 +1,13 @@
-import { useState } from "react";
-import './App.scss'
-import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import MainContent from './components/MainContent/MainContent'
-import Footer from './components/Footer/Footer'
-
+import { Route, Routes } from "react-router-dom"
+import HomePage from "./pages/HomePage/HomePage"
+import PhotoPage from "./pages/PhotoPage/PhotoPage";
 
 function App() {
-  const [filtersOpen, setFiltersOpen] = useState(false);
   return (
-    <>
-      <Header filtersOpen={filtersOpen} setFiltersOpen={setFiltersOpen} />
-      <Hero />
-      <MainContent filtersOpen={filtersOpen} />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="photo/:id" element={<PhotoPage />} />
+    </Routes>
   );
 }
 
