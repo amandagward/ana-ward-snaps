@@ -12,5 +12,26 @@
 
     &__logo {
         font-size: 2rem;
+        color: $color-snaps-black;
     }
+
+    &__backlink {
+        color: $color-forest-green;
+    }
+}
+
+.photo-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form {
+    width: 100%;
 }

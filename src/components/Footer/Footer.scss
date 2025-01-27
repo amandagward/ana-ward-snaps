@@ -2,52 +2,86 @@
 @use "../../styles/partials/mixins" as *;
 
 .footer {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 6rem;
 
+    &__top {
+        display: flex;
+        flex-direction: column;
 
-    @include tablet {
-        flex-direction: row;
-    }
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-    @include desktop {
-        flex-direction: row;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__logo {
         color: $color-snaps-black;
+        margin-bottom: 2rem;
+        @include wordmark-mobile;
+
+        @include desktop {
+            flex-grow: 1;
+        }
     }
 
-    &__resources {
+    &__nav-wrapper {
+        @include body-copy-mobile;
         color: $color-snaps-black;
 
-        @include tablet {}
+        &__resources {
+            margin-bottom: 1rem;
+        }
 
-        @include desktop {}
-    }
+        &__bio {
+            margin-bottom: 2rem;
+        }
 
-    &__bio {
-        color: $color-snaps-black;
+        @include tablet {
+            display: flex;
 
-        @include tablet {}
+            &__resources {
+                margin-right: 2rem;
+            }
+        }
 
-        @include desktop {}
+        @include desktop {
+            display: flex;
+
+            &__resources {
+                margin-right: 2rem;
+            }
+        }
     }
 
     &__socials {
+        display: flex;
         color: $color-forest-green;
         flex-direction: row;
+
+        &__item {
+            margin: .5rem;
+        }
     }
 
     &__legal {
         color: $color-sea-green;
+        @include label-mobile;
+
+        &-item {
+            display: inline;
+            margin: 0.5rem;
+        }
 
         &-item-dot {
             color: $color-snaps-black;
         }
     }
 
-    @include tablet {}
-
-    @include desktop {}
 }

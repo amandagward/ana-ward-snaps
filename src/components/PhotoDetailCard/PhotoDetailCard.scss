@@ -18,20 +18,10 @@
 }
 
 .photo-wrapper {
-    position: relative;
 
     &__photo {
         width: 100%;
         border-radius: 1rem 1rem 0 0;
-    }
-
-    &__photographer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background-color: $color-sea-green;
-        padding: 1rem;
-        border-radius: 1rem 0 0 0;
     }
 }
 

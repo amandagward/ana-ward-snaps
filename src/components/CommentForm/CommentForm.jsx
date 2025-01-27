@@ -27,11 +27,11 @@ export default function CommentForm({ photoId, comments, setComments }) {
         setComments([response.data, ...comments]);
     }
 
-    return (<form onSubmit={handleSubmit}>
-        <label htmlFor="name-field">Name</label>
-        <input type="text" id="name-field" value={name} onChange={handleNameChange} />
-        <label htmlFor="comment-field">Comment</label>
-        <textarea id="comment-field" value={comment} onChange={handleCommentChange} />
-        <button type="submit">Submit</button>
+    return (<form className="form-field" onSubmit={handleSubmit}>
+        <label htmlFor="form-field__name-field">Name</label>
+        <input type="text" id="form-field__name-field" value={name} onChange={handleNameChange} />
+        <label htmlFor="form-field__comment-field">Comment</label>
+        <textarea id="form-field__comment-field" value={comment} onChange={handleCommentChange} />
+        <button type="form-field__submit">Submit</button>
     </form>)
 }
