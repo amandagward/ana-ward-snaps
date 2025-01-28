@@ -2,18 +2,61 @@
 @use "../../styles/partials/variables" as *;
 
 .photo-card {
-    width: 95%;
+    width: 100%;
     background-color: $color-sea-green;
     border: 1px solid $color-forest-green;
     border-radius: 1rem;
     text-align: left;
 
-    @include tablet {
-        width: 45%;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem;
+
+        &__likes {
+            order: 1;
+        }
+
+        &__date {
+            order: 2;
+        }
+
+        &__photographer {
+            order: 3;
+            width: 100%;
+        }
+
+
+        @include tablet {
+            flex-wrap: nowrap;
+
+            &__photographer {
+                order: 2;
+                width: auto;
+            }
+
+            &__date {
+                order: 3;
+            }
+        }
     }
 
-    @include desktop {
-        width: 30%;
+    &__tags {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        color: $color-snaps-black;
+        text-align: left;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        &__tag-item {
+            padding: 0.5rem 0.8rem;
+            background-color: $color-snaps-white;
+            border: 1px solid $color-forest-green;
+            border-radius: 1rem;
+        }
     }
 }
 
@@ -22,22 +65,5 @@
     &__photo {
         width: 100%;
         border-radius: 1rem 1rem 0 0;
-    }
-}
-
-.photo-tags {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    color: $color-snaps-black;
-    text-align: left;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-
-    &__tag-item {
-        padding: 0.5rem 0.8rem;
-        background-color: $color-snaps-white;
-        border: 1px solid $color-forest-green;
-        border-radius: 1rem;
     }
 }

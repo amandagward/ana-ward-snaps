@@ -20,10 +20,23 @@
     }
 }
 
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .photo-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    width: 100%;
+
+    @include desktop {
+        width: 70%;
+    }
 }
 
 .photo-detail-card {

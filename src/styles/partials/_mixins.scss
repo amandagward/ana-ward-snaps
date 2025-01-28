@@ -17,11 +17,12 @@
 
 // Font Mixins
 
-@mixin font-face($size, $line-height, $weight, $style: normal) {
+@mixin font-face($size, $line-height, $weight, $style: normal, $font-family) {
     font-size: $size;
     line-height: $line-height;
     font-weight: $weight;
     font-style: $style;
+    font-family: $font-family;
 }
 
 // Mobile text styles
@@ -38,7 +39,7 @@
 }
 
 @mixin heading-mobile {
-    @include font-face(18px, 23px, 500);
+    @include font-face(18px, 23px, 500, normal, 'Outfit');
 }
 
 @mixin body-copy-mobile {

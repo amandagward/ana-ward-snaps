@@ -12,12 +12,16 @@
 
         @include tablet {
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-between;
+            align-items: start;
         }
 
         @include desktop {
             flex-direction: row;
+            flex-wrap: nowrap;
             justify-content: space-between;
+            align-items: start;
         }
     }
 
@@ -57,6 +61,10 @@
             &__resources {
                 margin-right: 2rem;
             }
+
+            &__bio {
+                margin-right: 2rem;
+            }
         }
     }
 
@@ -67,6 +75,16 @@
 
         &__item {
             margin: .5rem;
+        }
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            width: auto;
+            margin-bottom: 1rem;
         }
     }
 

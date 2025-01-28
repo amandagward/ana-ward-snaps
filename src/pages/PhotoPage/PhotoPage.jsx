@@ -31,15 +31,17 @@ function PhotoPage() {
                     Home
                 </Link>
             </header>
-            <div className="photo-page">
-                <div className="photo-detail-card">
-                    {photo != null ? <PhotoDetailCard photo={photo} /> : <></>}
-                </div>
-                <div className="comment-form">
-                    <CommentForm photoId={params.id} comments={comments} setComments={setComments} />
-                </div>
-                <div className="comment-list">
-                    <CommentList photoId={params.id} comments={comments} setComments={setComments} />
+            <div className="page-wrapper">
+                <div className="photo-page">
+                    <div className="photo-detail-card">
+                        {photo != null ? <PhotoDetailCard photo={photo} /> : <></>}
+                    </div>
+                    <div className="comment-form">
+                        <CommentForm photoId={params.id} comments={comments} setComments={setComments} />
+                    </div>
+                    <div className="comment-list">
+                        <CommentList photoId={params.id} comments={comments} setComments={setComments} />
+                    </div>
                 </div>
             </div>
             <Footer />
