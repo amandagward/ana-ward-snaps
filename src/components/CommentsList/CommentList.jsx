@@ -6,7 +6,7 @@ export default function CommentList({ photoId, comments, setComments }) {
     useEffect(() => {
         const fetchComments = async () => {
             const response = await axios.get(
-                `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=${window.apikey}`
+                `http://localhost:8080/photos/${photoId}/comments`
             );
             setComments(response.data.sort((a, b) => { return b.timestamp - a.timestamp }));
         };

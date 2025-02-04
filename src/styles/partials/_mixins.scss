@@ -17,12 +17,11 @@
 
 // Font Mixins
 
-@mixin font-face($size, $line-height, $weight, $style: normal, $font-family) {
+@mixin font-face($size, $line-height, $weight, $style: normal) {
     font-size: $size;
     line-height: $line-height;
     font-weight: $weight;
     font-style: $style;
-    font-family: $font-family;
 }
 
 // Mobile text styles

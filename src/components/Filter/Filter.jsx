@@ -8,7 +8,7 @@ export default function Filter({ activeFilter, setActiveFilter }) {
     useEffect(() => {
         const fetchTags = async () => {
             const response = await axios.get(
-                `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=${window.apikey}`
+                `http://localhost:8080/tags`
             );
             setTags(response.data);
         };

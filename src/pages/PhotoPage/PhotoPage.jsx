@@ -14,7 +14,7 @@ function PhotoPage() {
     useEffect(() => {
         const fetchPhoto = async () => {
             const response = await axios.get(
-                `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}?api_key=${window.apikey}`
+                `http://localhost:8080/photos/${params.id}`
             );
             setPhoto(response.data);
         };

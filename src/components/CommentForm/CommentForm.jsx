@@ -18,7 +18,7 @@ export default function CommentForm({ photoId, comments, setComments }) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const response = await axios.post(
-            `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=${window.apikey}`,
+            `http://localhost:8080/photos/${photoId}/comments`,
             { name: name, comment: comment },
             { "Content-Type": "application/json" }
         );
